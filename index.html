@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synthèse Atelier</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
+<body>
+  <header>
+    <h1>Synthèse Atelier</h1>
+  </header>
+
+  <nav class="menu-lignes">
+    <button class="ligne-btn" onclick="ouvrirPage('atelier')">🏭 Atelier</button>
+    <button class="ligne-btn" onclick="ouvrirPage('rapé')">Râpé</button>
+    <button class="ligne-btn" onclick="ouvrirPage('t2')">T2</button>
+    <button class="ligne-btn" onclick="ouvrirPage('rt')">RT</button>
+    <button class="ligne-btn" onclick="ouvrirPage('omori')">Omori</button>
+    <button class="ligne-btn" onclick="ouvrirPage('t1')">T1</button>
+    <button class="ligne-btn" onclick="ouvrirPage('sticks')">Sticks</button>
+    <button class="ligne-btn" onclick="ouvrirPage('emballage')">Emballage</button>
+    <button class="ligne-btn" onclick="ouvrirPage('des')">Dés</button>
+    <button class="ligne-btn" onclick="ouvrirPage('filets')">Filets</button>
+    <button class="ligne-btn" onclick="ouvrirPage('predecoupes')">Prédécoupés</button>
+    <button class="ligne-btn" onclick="ouvrirPage('arrets')">⏸️ Arrêts</button>
+    <button class="ligne-btn" onclick="ouvrirPage('organisation')">🗂️ Organisation</button>
+    <button class="ligne-btn" onclick="ouvrirPage('personnel')">👥 Personnel</button>
+  </nav>
+
+  <main id="contenu"></main>
+
+  <footer>
+    <button class="btn-calculatrice" onclick="toggleCalculatrice()">🧮</button>
+    <div id="calculatrice" class="calculatrice">
+      <input type="text" id="calc-affichage" readonly />
+      <div class="calc-boutons">
+        <button onclick="ajouterCalc('7')">7</button>
+        <button onclick="ajouterCalc('8')">8</button>
+        <button onclick="ajouterCalc('9')">9</button>
+        <button onclick="ajouterCalc('/')">÷</button>
+        <button onclick="ajouterCalc('4')">4</button>
+        <button onclick="ajouterCalc('5')">5</button>
+        <button onclick="ajouterCalc('6')">6</button>
+        <button onclick="ajouterCalc('*')">×</button>
+        <button onclick="ajouterCalc('1')">1</button>
+        <button onclick="ajouterCalc('2')">2</button>
+        <button onclick="ajouterCalc('3')">3</button>
+        <button onclick="ajouterCalc('-')">−</button>
+        <button onclick="ajouterCalc('0')">0</button>
+        <button onclick="ajouterCalc('.')">.</button>
+        <button onclick="calculerCalc()">=</button>
+        <button onclick="ajouterCalc('+')">+</button>
+        <button class="fermer" onclick="toggleCalculatrice()">Fermer</button>
+        <button class="effacer" onclick="effacerCalc()">C</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
