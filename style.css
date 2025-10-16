@@ -1,1 +1,184 @@
+/* === STYLE GLOBAL === */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f9ff;
+  color: #002b5c;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
 
+header {
+  background: #0072ce;
+  color: white;
+  padding: 12px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* === MENU DES LIGNES === */
+.menu-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: #eaf3ff;
+  border-bottom: 2px solid #0072ce;
+}
+
+.ligne-btn {
+  background: #0072ce;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.ligne-btn:hover {
+  background: #005ca1;
+  transform: scale(1.05);
+}
+
+/* === CONTENU PRINCIPAL === */
+main {
+  padding: 20px;
+}
+
+section {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 700px;
+}
+
+label {
+  display: block;
+  margin: 8px 0 5px;
+  font-weight: 500;
+  text-align: left;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #0072ce;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #005ca1;
+}
+
+/* === CALCULATRICE === */
+.btn-calculatrice {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0072ce;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.calculatrice {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 220px;
+  z-index: 999;
+}
+
+.calc-boutons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.calc-boutons button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.calc-boutons .fermer {
+  grid-column: span 2;
+  background: #ff4b4b;
+}
+
+.calc-boutons .effacer {
+  grid-column: span 2;
+  background: #999;
+}
+
+/* === TABLEAUX ET GRAPHIQUES === */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+th {
+  background: #0072ce;
+  color: white;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .ligne-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .calculatrice {
+    right: 10px;
+    bottom: 80px;
+  }
+}
